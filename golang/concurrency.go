@@ -32,7 +32,7 @@ func main() {
 			log.Print(err) // 假设出现了错误
 			continue
 		}
-		handleConn(conn) // 处理连接
+		go handleConn(conn) // 处理连接,这里添加go关键词，进行并发处理
 	}
 }
 
